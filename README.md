@@ -36,5 +36,11 @@ var ordered5 = persons.OrderBy(p => p.Name, new NaturalStringComparer());
 var ordered6 = persons.OrderByDescending(p => p.Name, new NaturalStringComparer());
 ```
 
+> [!IMPORTANT]
+> Does not support decimal fractions, only full numbers are compared.<br/>
+> Does not support negative numbers, so '-' and '+' will be compared just like any other non-digit character.<br/>
+> Does not support comparing scientific number representations like 1e3.
+
+
 ## Benchmarks
 Soon™
