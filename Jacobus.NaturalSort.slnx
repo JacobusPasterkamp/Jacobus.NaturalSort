@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Jacobus.NaturalSort/Jacobus.NaturalSort.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="test/Jacobus.NaturalSort.UnitTests/Jacobus.NaturalSort.UnitTests.csproj" Id="107051cf-6d42-41ef-a165-08b1dea3d884" />
+  </Folder>
+</Solution>
