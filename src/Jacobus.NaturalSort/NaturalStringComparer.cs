@@ -30,20 +30,20 @@ namespace Jacobus.NaturalSort;
 /// <b>Greater than zero</b> if x is greater than y.<br/>
 /// <b>Less than zero</b> if x is less than y.
 /// </returns>
-public sealed class NaturalSortComparer : IComparer<string>
+public sealed class NaturalStringComparer : IComparer<string>
 {
     private readonly CultureInfo _culture;
 
     /// <summary>
     /// Creates a natural sort comparer using <see cref="CultureInfo.InvariantCulture"/> to compare single characters.
     /// </summary>
-    public NaturalSortComparer() : this(CultureInfo.InvariantCulture) { }
+    public NaturalStringComparer() : this(CultureInfo.InvariantCulture) { }
 
     /// <summary>
     /// Creates a natural sort comparer using the specified culture.
     /// </summary>
     /// <param name="culture">The culture to use for comparing single characters.</param>
-    public NaturalSortComparer(CultureInfo culture)
+    public NaturalStringComparer(CultureInfo culture)
     {
         _culture = culture ?? throw new ArgumentNullException(nameof(culture));
     }

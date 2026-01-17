@@ -2,6 +2,8 @@
 
 public class SortingTests
 {
+    record File2(string Name);
+
     private class File(string name)
     {
         public string Name { get; set; } = name;
@@ -27,7 +29,7 @@ public class SortingTests
         new("file100.txt"),
     ];
 
-    private readonly NaturalSortComparer _comparer = new();
+    private readonly NaturalStringComparer _comparer = new();
 
     [Fact]
     public void SortLists()

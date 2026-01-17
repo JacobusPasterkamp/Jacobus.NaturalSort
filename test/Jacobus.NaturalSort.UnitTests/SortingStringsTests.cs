@@ -22,7 +22,7 @@ public class SortingStringsTests
         "file100.txt"
     ];
 
-    private readonly NaturalSortComparer _comparer = new();
+    private readonly NaturalStringComparer _comparer = new();
 
     [Fact]
     public void SortLists()

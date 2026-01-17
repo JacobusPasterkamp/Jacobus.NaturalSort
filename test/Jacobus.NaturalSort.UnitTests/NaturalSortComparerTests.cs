@@ -22,7 +22,7 @@ public class NaturalSortComparerTests
     [InlineData("010", "10")]
     public void LessThan(string a, string b)
     {
-        NaturalSortComparer comparer = new();
+        NaturalStringComparer comparer = new();
 
         int result = comparer.Compare(a, b);
 
@@ -49,7 +49,7 @@ public class NaturalSortComparerTests
     [InlineData("10", "010")]
     public void GreaterThan(string a, string b)
     {
-        NaturalSortComparer comparer = new();
+        NaturalStringComparer comparer = new();
 
         int result = comparer.Compare(a, b);
 
@@ -66,7 +66,7 @@ public class NaturalSortComparerTests
     [InlineData("a12", "a12")]
     public void Equal(string a, string b)
     {
-        NaturalSortComparer comparer = new();
+        NaturalStringComparer comparer = new();
 
         int result = comparer.Compare(a, b);
 
@@ -78,7 +78,7 @@ public class NaturalSortComparerTests
     {
         string a = new string('a', 1000) + "11";
         string b = new string('a', 1000) + "2";
-        NaturalSortComparer comparer = new();
+        NaturalStringComparer comparer = new();
 
         int result = comparer.Compare(a, b);
 
@@ -90,7 +90,7 @@ public class NaturalSortComparerTests
     {
         string a = new string('a', 1000) + "2";
         string b = new string('a', 1000) + "11";
-        NaturalSortComparer comparer = new();
+        NaturalStringComparer comparer = new();
 
         int result = comparer.Compare(a, b);
 
@@ -102,7 +102,7 @@ public class NaturalSortComparerTests
     {
         string a = new string('a', 1000) + "11";
         string b = new string('a', 1000) + "11";
-        NaturalSortComparer comparer = new();
+        NaturalStringComparer comparer = new();
 
         int result = comparer.Compare(a, b);
 
