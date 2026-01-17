@@ -19,21 +19,22 @@ Because `NaturalStringComparer` is an `IComparer<string>` implementation, you ca
 
 ```csharp
 using Jacobus.NaturalSort;
+var comparer = new NaturalStringComparer();
 
 // You can sort collections of strings.
 string[] files = [ "file10", "file2" ];
-files.Sort(new NaturalStringComparer());
-var ordered1 = files.OrderBy(f => f, new NaturalStringComparer());
-var ordered2 = files.OrderByDescending(f => f, new NaturalStringComparer());
-var ordered3 = files.Order(new NaturalStringComparer());
-var ordered4 = files.OrderDescending(new NaturalStringComparer());
+files.Sort(comparer);
+var ordered1 = files.OrderBy(f => f, comparer);
+var ordered2 = files.OrderByDescending(f => f, comparer);
+var ordered3 = files.Order(comparer);
+var ordered4 = files.OrderDescending(comparer);
 
 // You can sort collections of instances.
 record Person(string Name);
 List<Person> persons = [ new Person("John"), new Person("Jack") ];
-persons.Sort((a, b) => _comparer.Compare(a.Name, b.Name));
-var ordered5 = persons.OrderBy(p => p.Name, new NaturalStringComparer());
-var ordered6 = persons.OrderByDescending(p => p.Name, new NaturalStringComparer());
+persons.Sort((a, b) => comparer.Compare(a.Name, b.Name));
+var ordered5 = persons.OrderBy(p => p.Name, comparer);
+var ordered6 = persons.OrderByDescending(p => p.Name, comparer);
 ```
 
 > [!IMPORTANT]
