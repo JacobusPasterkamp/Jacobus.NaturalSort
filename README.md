@@ -15,7 +15,7 @@ Install-Package Jacobus.NaturalSort
 ```
 
 ## Usage
-As `NaturalStringComparer` is an `IComparer<string>` implementation, you can use the normal C# sorting and ordering methods. 
+Because `NaturalStringComparer` is an `IComparer<string>` implementation, you can use the normal C# sorting and ordering methods. 
 
 ```csharp
 using Jacobus.NaturalSort;
@@ -30,7 +30,7 @@ var ordered4 = files.OrderDescending(new NaturalStringComparer());
 
 // You can sort collections of instances.
 record Person(string Name);
-List<Person> persons = [ new Person("John"), new Person("Jack") ]
+List<Person> persons = [ new Person("John"), new Person("Jack") ];
 persons.Sort((a, b) => _comparer.Compare(a.Name, b.Name));
 var ordered5 = persons.OrderBy(p => p.Name, new NaturalStringComparer());
 var ordered6 = persons.OrderByDescending(p => p.Name, new NaturalStringComparer());
